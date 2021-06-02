@@ -1,0 +1,7 @@
+def lessThanRequLen(aList,requLen):
+    a=[]
+    for i in range(0,len(aList)):
+        x=aList[i]
+        if len(x)<requLen:
+            a.append(x)
+    return a
