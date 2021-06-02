@@ -1,0 +1,9 @@
+def vowelsCount(x):
+    num = 0
+    x=x.lower()
+    vowels = 'aeiou'
+    num=0
+    for i in x:
+        if i in vowels:
+            num+=1
+    return num
