@@ -1,0 +1,12 @@
+def strCount(s,o):
+    num = 0
+    word = o
+    wordL = len(word)
+    for i in range(0,len(s)-wordL+1):
+        tester = ""
+        for j in range(i,i+wordL):
+            tester+=s[j]
+            if tester == word:
+                num+=1 
+    return num
+    
