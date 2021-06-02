@@ -1,0 +1,14 @@
+def primes_list(N):
+    optimus=[2]
+    if N==2:
+        return optimus
+    else:
+        for i in range(3,N+1):
+            div=[]
+            for j in range(2,i):
+                if i%j==0:
+                    div.append('y')
+                    break
+            if 'y' not in div:
+                optimus.append(i)
+        return optimus
