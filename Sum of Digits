@@ -1,0 +1,7 @@
+def sumDigits(N):
+    m=N%10
+    N=N//10
+    if N==0:
+        return m
+    else:
+        return (m+ sumDigits(N))
