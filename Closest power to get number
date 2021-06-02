@@ -1,0 +1,24 @@
+def closest_power(base, num):
+    if base>=num:
+        l=base-num
+        s=num
+        if l>=s:
+            expo=0
+            return expo
+        else:
+            expo =1
+            return expo
+    else:
+        expo=1
+        k=base
+        while k<num:
+            expo+=1
+            k=base**int(expo)
+            l=num-k
+        k1=base**int(expo-1)
+        l=k-num
+        s=num-k1
+        if l>=s:
+            return expo-1
+        else:
+            return expo
