@@ -1,0 +1,10 @@
+def polysum(n,s):
+    #n: number of sides
+    #s: length
+    import math
+    pi=math.pi
+    area=(0.25*n*(s**2))/math.tan(pi/n)
+    peri=n*s
+    sum=area+peri
+    sum=round(sum,4)
+    return sum
