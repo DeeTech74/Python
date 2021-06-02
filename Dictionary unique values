@@ -1,0 +1,16 @@
+def uniqueValues(aDict):
+    x = {} 
+    for key, value in aDict.items(): 
+        if value not in x: 
+            x[value] = [key]
+            print ('x',x)
+        else: 
+            x[value].append(key)
+    z=list(x.values())
+    print (z)
+    main=[]
+    for i in range(0,len(z)):
+        if len(z[i])==1:
+            main=main+z[i]
+    main.sort(reverse=False)
+    return main
