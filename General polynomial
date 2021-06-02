@@ -1,0 +1,10 @@
+def general_poly(L):
+    def powSum(x):
+        s = 0
+        for i in range(0, len(L)):
+            k = (len(L)-1) - i 
+            s += (L[i] * (x**k))
+        return s
+    return powSum
+x=general_poly([1,2,3])
+k=x(2)
