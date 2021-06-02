@@ -1,0 +1,13 @@
+ def isIn(char, aStr):
+    if aStr:
+        m_alpha_index = (len(aStr) // 2)
+        m_alpha = aStr[m_alpha_index]
+
+        if m_alpha == char:
+            return True
+        elif char < m_alpha: 
+            return isIn(char, aStr[:m_alpha_index])    
+        else:
+            return isIn(char, aStr[m_alpha_index + 1:]) 
+    else: 
+            return False
