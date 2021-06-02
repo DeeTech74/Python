@@ -1,0 +1,12 @@
+def is_triangular(k):
+    a=1
+    sum=0
+    while sum<k:
+        sum=sum+a
+        a+=1
+    if sum==k:
+        return True
+    elif k==1:
+        return True
+    else:
+        return False
