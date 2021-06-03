@@ -1,0 +1,30 @@
+Python Script
+2)Cap
+
+import bpy
+import bmesh
+
+bpy.ops.mesh.primitive_cylinder_add(radius=0.3, depth=0.3, view_align=False, enter_editmode=False, location=(0, 0, 1.58560))
+bpy.ops.object.shade_smooth()
+
+bpy.ops.object.editmode_toggle()
+
+bpy.context.tool_settings.mesh_select_mode = (False, False, True) 
+
+obc = bpy.context.active_object
+bmc = bmesh.from_edit_mesh(obc.data)
+bpy.ops.mesh.select_all(action='TOGGLE')
+
+for f in bmc.faces: 
+    if (f.index==33):
+       f.select = True    
+bpy.ops.mesh.delete(type='ONLY_FACE')
+ 
+bpy.ops.object.editmode_toggle()
+
+bpy.ops.object.modifier_add(type='SOLIDIFY')
+bpy.context.object.modifiers["Solidify"].thickness = 0.03
+
+bpy.ops.object.select_all(action='TOGGLE')
+
+
